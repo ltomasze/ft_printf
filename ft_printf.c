@@ -6,7 +6,7 @@
 /*   By: ltomasze <ltomasze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:22:28 by ltomasze          #+#    #+#             */
-/*   Updated: 2024/03/22 17:48:48 by ltomasze         ###   ########.fr       */
+/*   Updated: 2024/03/24 14:38:34 by ltomasze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,13 @@ int	ft_putarg(va_list args, const char format)
 	else if (format == 'd' || format == 'i')
 		result = result + ft_putnbr(va_arg(args, int));
 	else if (format == 'p')
-		result = result + ft_putptr(va_arg(args, intptr_t));
+		result = result + ft_putptr(va_arg(args, size_t));
+	else if (format == 'u')
+		result = result + ft_putuns(va_arg(args, unsigned int));
+	else if (format == 'x' || format == 'X')
+		result = result + ft_putx(va_arg(args, unsigned int), format);
+	else if (format == '%')
+		result = result + ft_putchar('%');
 	return (result);
 }
 

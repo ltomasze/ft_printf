@@ -6,13 +6,13 @@
 /*   By: ltomasze <ltomasze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:53:59 by ltomasze          #+#    #+#             */
-/*   Updated: 2024/03/22 18:16:03 by ltomasze         ###   ########.fr       */
+/*   Updated: 2024/03/24 14:14:51 by ltomasze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	len_ptr(size_t nb)
+int	ft_len_ptr(size_t nb)
 {
 	int	len;
 
@@ -52,7 +52,7 @@ int	ft_putptr(size_t ptr)
 	{
 		ptr_print = ptr_print + write(1, "0x", 2);
 		ft_put_ptr(ptr);
-		ptr_print = ptr_print + len_ptr(ptr);
+		ptr_print = ptr_print + ft_len_ptr(ptr);
 	}
 	return (ptr_print);
 }
