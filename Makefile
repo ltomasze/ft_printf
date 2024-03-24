@@ -6,13 +6,14 @@
 #    By: ltomasze <ltomasze@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/01 12:08:53 by ltomasze          #+#    #+#              #
-#    Updated: 2024/03/22 17:39:56 by ltomasze         ###   ########.fr        #
+#    Updated: 2024/03/24 14:14:57 by ltomasze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRCS =	ft_printf.c ft_printf_nbr.c ft_printf_ptr.c \
+ft_printf_uns.c ft_printf_xX.c
 
 OBJS = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
